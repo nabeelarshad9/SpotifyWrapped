@@ -1,0 +1,274 @@
+<!-- res/layout/activity_user_profile.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SumBG">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        style="@style/SumBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/navCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:outlineAmbientShadowColor="#C88C8C"
+                android:outlineSpotShadowColor="#973838"
+                android:padding="24dp">
+
+<!--                <EditText-->
+<!--                    android:id="@+id/msgToken"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:singleLine="false" />-->
+
+                <ImageButton
+                    android:id="@+id/edit_delete"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/roundbutton"
+                    android:layout_marginHorizontal="17dp"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:srcCompat="@drawable/baseline_edit_24" />
+
+                <ImageButton
+                    android:id="@+id/darkmain"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="17dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:srcCompat="@drawable/baseline_dark_mode_24" />
+
+                <ImageButton
+                    android:id="@+id/notif"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="17dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:srcCompat="@drawable/baseline_notif" />
+
+                <ImageButton
+                    android:id="@+id/logout"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="17dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintHorizontal_bias="0.894"
+                    app:srcCompat="@drawable/baseline_exit_to_app_24" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timedur"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/topHolidayTracks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameTextView"
+                    android:layout_marginTop="16dp"
+                    android:text="Top Holiday Tracks"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/holiday_track_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topHolidayTracks"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/response_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/holiday_track_text_view"
+                    android:textSize="18dp"
+                    tools:text="Line 1\nLine 2\nLine 3" />
+
+                <TextView
+                    android:id="@+id/topArtistsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/response_text_view"
+                    android:layout_marginTop="16dp"
+                    android:text="Top Artists"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/artistList_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topArtistsTitle"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/genre_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/artistList_text_view"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toptrack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topCard"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/topSongsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Top Tracks"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/songsList_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topSongsTitle"
+                    android:textSize="18dp"
+                    tools:text="Line 1\nLine 2\nLine 3\nLine 4\n Line 5" />
+
+                <Button
+                    android:id="@+id/saveToHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Save to History"
+                    app:cornerRadius="30dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timedur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/navCard"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <Button
+                    android:id="@+id/all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="All"
+
+                    app:cornerRadius="30dp" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"></Space>
+
+                <Button
+                    android:id="@+id/medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="6-month"
+                    app:cornerRadius="30dp" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"></Space>
+
+                <Button
+                    android:id="@+id/srt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="4-week"
+                    app:cornerRadius="30dp" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/toptrack"></Space>
+
+    </RelativeLayout>
+</ScrollView>
